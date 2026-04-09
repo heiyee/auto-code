@@ -1,0 +1,33 @@
+.DS_Store
+/tmp
+
+# local runtime data and generated frontend bundles
+/data/
+/frontend/dist/
+
+# Local IDE and account configuration
+.claude_accounts.json
+.idea
+
+# Sensitive local files
+.env
+.env.*
+*.pem
+*.key
+
+# Binary output
+auto-code
+bin/
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Test results
+frontend/test-results/
+frontend/e2e/
+frontend/dist/mockServiceWorker.js
+frontend/dist/playwright-host.html
+
+# Playwright
+frontend/playwright.config.ts
+frontend/public/playwright-host.html

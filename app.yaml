@@ -1,0 +1,40 @@
+auth:
+  enabled: false
+  username: ""
+  password: ""
+  session_secret: ""
+  session_max_age: 86400
+
+cli_profiles:
+  claude:
+    - id: default
+      name: Claude Code
+      script_command: claude --dangerously-skip-permissions
+      description: Default Claude Code launcher
+  codex:
+    - id: default
+      name: OpenAI Codex
+      script_command: codex --yolo
+      description: Default Codex launcher
+  cursor:
+    - id: default
+      name: Cursor
+      script_command: cursor-agent
+      description: Default Cursor launcher
+
+server:
+  port: 9080
+  data_dir: ./data
+
+cli:
+  default_command: codex --yolo
+  output_processors_mode: default
+
+cli_output:
+  archive_dir: /tmp/auto-code-cli-output
+  archive_limit: 500
+
+automation:
+  max_requirement_retry_attempts: 5
+  reconnect_base_seconds: 15
+  reconnect_max_seconds: 600
